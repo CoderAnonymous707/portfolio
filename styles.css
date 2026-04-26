@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+body {
+    background-color: #35343a;
+    user-select: none;
+}
+
+#bottom-bar {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 5%, #bdbfce 30%);
+    /*border: 1px solid black;*/
+
+    position: fixed;
+    margin: 0px -8px -8px -8px;
+    bottom: 0px; 
+    width: 100%;
+}
+
+#bottom-bar a {
+    margin: 0px 30px 0px 30px;
+    background: none;
+    border: none;
+
+    position: relative;
+    top: -70px;
+
+    font-family: "Inter", Arial;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    transition-duration: 0.5s;
+}
+
+#bottom-bar a:hover {
+    cursor: pointer;
+    letter-spacing: 5px;
+}
+
+#side-bar {
+    background-color: #17161b;
+    height: 100%; 
+    width: 480px;
+
+    position: fixed; 
+    left: 74%; 
+    top: 0px;
+
+    margin: 0px;
+    padding: 20px 30px;
+    
+    color: rgb(255, 166, 41);
+
+    font-family: "Source Serif 4";
+    font-size: 18px;
+}
+
+#side-bar h1 {
+    font-family: "Inter";
+    font-size: 70px;
+    word-wrap: normal;
+}
+
+#works-content {
+    width: 1000px; 
+    height: 1000px;
+
+    margin: 10px 100px;
+}
+
+#works-content button {
+    border: none;
+    background-color: rgba(255, 140, 0);
+    border-radius: 3px;
+    color: white;
+
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 13px;
+
+}
+
+#works-content #vana-clinic {
+    background-image: url("Images/Aaruthal\ Render.png");
+    background-size: 150%;
+    background-position: -150px -300px;
+    height: 400px;
+    width: 600px;
+}
+
+#works-content #daycare {
+    background-image: url("Images/Daycare\ Render.png");
+    background-size: 170%;
+    background-position: -200px 0px;
+    height: 400px;
+    width: 600px;
+}
+
+#works-content #majonghor {
+    background-image: url("Images/House Majonghor Render.png");
+    background-size: 140%;
+    background-position: -130px 0px;
+    height: 400px;
+    width: 600px;
+}
+
+#works-content #thiranagam {
+    background-image: url("Images/Thiranagam Render.png");
+    background-size: 140%;
+    background-position: -130px 0px;
+    height: 400px;
+    width: 600px;
+}
+
+#works-content #s1 {
+    background-color: rgba(39, 39, 39, 0.8);
+    background-size: 140%;
+    background-position: -130px 0px;
+    height: 400px;
+    width: 600px;
+}
+
+.work-card {
+    font-family: "Inter";
+    font-weight: 200;
+    font-size: 18px;
+    color: white;
+    margin: 0px 10px;
+
+    border-radius: 20px;
+}
+
+.work-card p {
+    position: relative;
+    top: 340px;
+    left: 10px;
+    line-height: 18px; 
+}
+
+.work-card b {
+    font-weight: 700;
+}
+
+.work-card .caption {
+    font-size: 12px;
+}
+
+.work-card:hover {
+    box-shadow: 0px 0px 10px 10px rgba(255, 140, 0, 0.3);
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+#works {
+    position: fixed;
+    z-index: 10;
+
+    width: 100%;
+    height: 100%;
+    margin: -10px -8px;
+    padding: 30px 50px;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+
+    font-family: "Inter", Arial;
+    font-weight: 200;
+}
+
+/* The Overlay Background */
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Translucent black */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header: Title and Close Button */
+.overlay-header {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 0 40px;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-sizing: border-box;
+}
+
+.overlay h2 {
+    font-family: "Source Serif 4";
+    font-weight: 400;
+    font-size: 40px;
+    margin: 0;
+}
+
+.overlay p {
+    font-family: "Inter";
+    font-weight: 200;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* Image Styling */
+.image-container img {
+    max-width: 85vw;
+    max-height: 80vh;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: opacity 0.3s;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 20px;
+    transition: opacity 0.3s;
+}
+
+.nav-btn:hover { opacity: 0.7; }
+.prev-btn { left: 20px; }
+.next-btn { right: 20px; }
+
+#close-gallery {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+
+    position: fixed; 
+    right: 30px; 
+    top: 20px;
+}
+
+
+.image-container.active {
+    opacity: 1;
+    visibility: visible;
+}
