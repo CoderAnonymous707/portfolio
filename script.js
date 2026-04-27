@@ -6,6 +6,9 @@ const closeBtn = document.getElementById('close-gallery');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 
+// Loader
+const loader = document.getElementById('image-loader');
+
 let currentImages = [];
 let currentIndex = 0;
 
@@ -52,17 +55,18 @@ prevBtn.addEventListener('click', (e) => {
 // 4. Close Gallery
 closeBtn.addEventListener('click', () => {
     overlay.style.display = 'none';
+    loader.style.display = 'none';
 });
 
 // Close when clicking outside the image
 overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) overlay.style.display = 'none';
+    if (e.target === overlay) {
+        overlay.style.display = 'none';
+        loader.style.display = 'none';
+    }
 });
 
 // LOADING MECHANISM 
-
-// Import Image loader based on ID
-const loader = document.getElementById('image-loader');
 
 function updateGalleryImage() {
     // 1. Hide the old image and show the loader
@@ -86,3 +90,14 @@ galleryImg.onload = function() {
     galleryImg.classList.add('loaded'); // Fade in image
     preloadNext();
 };
+
+// GLOBAL PRELOADING MECHANISM
+
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('global-preloader');
+
+    // Add a tiny delay so the user actually sees the transition (optional)
+    setTimeout(() => {
+        preloader.classList.add('fade-out');
+    }, 500); 
+});

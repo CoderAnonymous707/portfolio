@@ -253,14 +253,17 @@ body {
 /* LOADER */
 
 .loader {
-    border: 4px solid rgba(255, 255, 255, 0.3);
+    border: 10px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
-    border-top: 4px solid #fff;
-    width: 40px;
-    height: 40px;
+    border-top: 10px solid #fff;
+    width: 100px;
+    height: 100px;
     animation: spin 1s linear infinite;
     display: none; /* Hidden by default */
-    position: absolute;
+    position: fixed;
+    bottom: 45%; 
+    left: 45%;
+    z-index: 999;
 }
 
 @keyframes spin {
@@ -276,4 +279,61 @@ body {
 
 #gallery-img.loaded {
     opacity: 1;
+}
+
+/* GLOBAL LOADER */
+
+#global-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a; /* Match your site's theme */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#global-preloader .preloader {
+    border: 10px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 10px solid #fff;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+    display: fixed; /* Hidden by default */
+    position: fixed;
+    bottom: 45%; 
+    left: 45%;
+    z-index: 999;
+}
+
+#global-preloader p {
+    font-family: "Source Serif 4";
+    font-size: 20px;
+    color: white;
+    position: fixed;
+    top: 39%;
+    left: 44.5%;
+    text-align: center;
+}
+
+#global-preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* You can reuse your existing .loader animation here */
+#global-preloader .loader {
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-top: 4px solid #ffffff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
 }
