@@ -58,3 +58,31 @@ closeBtn.addEventListener('click', () => {
 overlay.addEventListener('click', (e) => {
     if (e.target === overlay) overlay.style.display = 'none';
 });
+
+// LOADING MECHANISM 
+
+// Import Image loader based on ID
+const loader = document.getElementById('image-loader');
+
+function updateGalleryImage() {
+    // 1. Hide the old image and show the loader
+    galleryImg.classList.remove('loaded');
+    loader.style.display = 'block';
+    
+    // 2. Change the source (this starts the GitHub download)
+    galleryImg.src = currentImages[currentIndex];
+}
+
+// Function to preload the next image while the user is viewing the current one
+function preloadNext() {
+    const nextIndex = (currentIndex + 1) % currentImages.length;
+    const imgPreload = new Image();
+    imgPreload.src = currentImages[nextIndex]; // Browser starts downloading this quietly
+}
+
+// 3. This triggers ONLY when the download is 100% complete
+galleryImg.onload = function() {
+    loader.style.display = 'none';      // Hide spinner
+    galleryImg.classList.add('loaded'); // Fade in image
+    preloadNext();
+};

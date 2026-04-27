@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kavipriyan K</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!--div id="bottom-bar">
+            <img src="Images/Kavipriyan Logo Transparent.png" 
+            style="width: 200px; height: 200px; position: relative; bottom: 10px;">
+            <span style="margin-left: 10px">
+                <a href="about.html">About Me</a>
+                <a href="about.html">Works</a>
+                <a href="about.html">Let Me Know</a>
+            </span>
+        </div-->
+        
+        <div id="side-bar">
+            <h1>This is Kavipriyan K</h1>
+            2<sup>nd</sup> Year Architecture Student<br>
+            National Institute of Technology, Tiruchirappalli
+        </div>
+
+        <div id="about-content">
+
+        </div>
+
+        <!--div id="works">
+            <div class="display" id="aaruthal" style="display: block;">
+                <h1 style="font-weight: 300; line-height: 8px;">Aaruthal</h1>
+                Ministers' Residence
+                <img src="Portfolio/Vana/1.jpeg" style="position: fixed; top: 180px; height: 800px;">
+            </div>
+        </div-->
+
+        <!--div class="work-card" id="vana-clinic" 
+            data-title = "Vana, Veterinary Clinic Design" 
+            data-images = '["1.jpg", "2.jpg", "3.jpg"]'>
+
+            <img src="thumb.jpg" alt="Vana Project">
+            <h3>Vana Clinic</h3>
+        </div-->
+
+        <div id="gallery-overlay" class="overlay">
+            <div class="overlay-header">
+                <h2 id="project-title"></h2>
+                <p id="project-cap"></p>
+                <button id="close-gallery">&times;</button>
+            </div>
+            
+            <button class="nav-btn prev-btn" id="prev-btn">&#10094;</button>
+            <div class="image-container">
+                <img id="gallery-img" src="" alt="Gallery Image" style="border-radius: 10px">
+            </div>
+            <button class="nav-btn next-btn" id="next-btn">&#10095;</button>
+        </div>
+
+        <div id="works-content">
+            <table>
+                <tr>
+                    <td>
+                        <div class="work-card" id="vana-clinic"
+                            data-title = "Vana" 
+                            data-sub = "Veterinary Clinic"
+                            data-images = '["Vana", 3]'>    
+                            <p>
+                                <b>Vana</b> &nbsp; &nbsp; &nbsp; Veterinary Clinic Design &nbsp; <button>Manual</button><br>
+                                <span class="caption">2<sup>nd</sup> year Architectural Design Project</span>
+                            </p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="work-card" id="daycare"
+                            data-title = "Illakoodam" 
+                            data-sub = "Daycare Centre"
+                            data-images = '["Daycare", 5]'>    
+                            <p>
+                                <b>Illakoodam</b> &nbsp; &nbsp; &nbsp; Daycare Centre &nbsp; <button>Manual</button><br>
+                                <span class="caption">1<sup>st</sup> year Architectural Design Project</span>
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="work-card" id="thiranagam" onClick="Open('thiranagam')"
+                            data-title = "Thiranagam" 
+                            data-sub = "Skill Development Centre"
+                            data-images = '["Thiranagam", 3]'> 
+                            <p>
+                                <b>Thiranagam</b> &nbsp; &nbsp; &nbsp; Skill Development Centre &nbsp; <button>Manual</button><br>
+                                <span class="caption">2<sup>nd</sup> year Architectural Design Project</span>
+                            </p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="work-card" id="majonghor"
+                            data-title = "House Majonghor" 
+                            data-sub = "Climate Responsive House"
+                            data-images = '["Majonghor", 8]'>    
+                            <p>
+                                <b>House Majonghor</b> &nbsp; &nbsp; &nbsp; Climate Responsive House<br>
+                                <span class="caption">2<sup>nd</sup> year Climate ResponsiveDesign Project</span>
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="work-card" id="s1"
+                            data-title = "Vana" 
+                            data-sub = "Veterinary Clinic"
+                            data-images = '["Vana", 3]'>    
+                            <p>
+                                <b>Sample</b> &nbsp; &nbsp; &nbsp; Sample &nbsp; <button>Manual</button><br>
+                                <span class="caption">6<sup>th</sup> year Architectural Design Project</span>
+                            </p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="work-card" id="s1"
+                            data-title = "Illakoodam" 
+                            data-sub = "Daycare Centre"
+                            data-images = '["Daycare", 5]'>    
+                            <p>
+                                <b>Sample</b> &nbsp; &nbsp; &nbsp; Sample &nbsp; <button>Manual</button><br>
+                                <span class="caption">6<sup>th</sup> year Design Project</span>
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="contacts-content">
+
+        </div>
+
+        <img src="Images/Kavipriyan Portfolio pic.png"
+            style="height: 820px; position: fixed; right: -80px; bottom: 0px;">
+
+        <!--Spinning Loader Container-->
+        <div class="image-container">
+            <div id="image-loader" class="loader"></div>
+            <img id="gallery-img" src="" alt="Gallery Image">
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
