@@ -1,10 +1,12 @@
 const overlay = document.getElementById('gallery-overlay');
 const galleryImg = document.getElementById('gallery-img');
-const projectTitle = document.getElementById('project-title');
-const projectCap = document.getElementById('project-cap');
 const closeBtn = document.getElementById('close-gallery');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
+
+const projectTitle = document.getElementById('project-title');
+const projectCap = document.getElementById('project-cap');
+const projectLoc = document.getElementById('project-loc');
 
 // Loader
 const loader = document.getElementById('image-loader');
@@ -27,6 +29,8 @@ document.querySelectorAll('.work-card').forEach(card => {
 
         projectTitle.innerText = card.getAttribute('data-title');
         projectCap.innerText = card.getAttribute('data-sub');
+        projectLoc.innerText = card.getAttribute('data-loc');
+
         currentIndex = 0;
         
         updateGalleryImage();

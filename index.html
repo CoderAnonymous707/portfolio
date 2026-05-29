@@ -3,7 +3,7 @@
     <head>
         <title>Kavipriyan K</title>
         <link rel="stylesheet" href="styles.css">
-    </head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=location_on" />
     <body>
         <!--div id="bottom-bar">
             <img src="Images/Kavipriyan Logo Transparent.png" 
@@ -16,7 +16,7 @@
         </div-->
         
         <div id="side-bar">
-            <h1>This is Kavipriyan K</h1>
+            <h1>Kavipriyan K</h1>
             2<sup>nd</sup> Year Architecture Student<br>
             National Institute of Technology, Tiruchirappalli
         </div>
@@ -28,7 +28,6 @@
         <!--Global Loader (Beginning)-->
         <div id="global-preloader">
             <div class="loader"></div>
-            <p>Loading Portfolio</p>
             <div class="preloader"></div>
         </div>
 
@@ -36,6 +35,12 @@
             <div class="overlay-header">
                 <h2 id="project-title"></h2>
                 <p id="project-cap"></p>
+                <p style="margin-top: 8px;">
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+                    <span id="project-loc" style="position: relative; bottom: 7px;"></span>
+                </p>
                 <button id="close-gallery">&times;</button>
             </div>
             
@@ -50,33 +55,10 @@
             <table>
                 <tr>
                     <td>
-                        <div class="work-card" id="vana-clinic"
-                            data-title = "Vana" 
-                            data-sub = "Veterinary Clinic"
-                            data-images = '["Vana", 3]'>    
-                            <p>
-                                <b>Vana</b> &nbsp; &nbsp; &nbsp; Veterinary Clinic Design &nbsp; <button>Manual</button><br>
-                                <span class="caption">2<sup>nd</sup> year Architectural Design Project</span>
-                            </p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="work-card" id="daycare"
-                            data-title = "Illakoodam" 
-                            data-sub = "Daycare Centre"
-                            data-images = '["Daycare", 5]'>    
-                            <p>
-                                <b>Illakoodam</b> &nbsp; &nbsp; &nbsp; Daycare Centre &nbsp; <button>Manual</button><br>
-                                <span class="caption">1<sup>st</sup> year Architectural Design Project</span>
-                            </p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
                         <div class="work-card" id="thiranagam" onClick="Open('thiranagam')"
                             data-title = "Thiranagam" 
                             data-sub = "Skill Development Centre"
+                            data-loc = "Sundarapandiapuram, Tenkasi Dt."
                             data-images = '["Thiranagam", 3]'> 
                             <p>
                                 <b>Thiranagam</b> &nbsp; &nbsp; &nbsp; Skill Development Centre &nbsp; <button>Manual</button><br>
@@ -85,9 +67,36 @@
                         </div>
                     </td>
                     <td>
+                        <div class="work-card" id="aaruthal"
+                            data-title = "Aaruthal" 
+                            data-sub = "Minister's Residence"
+                            data-loc = "Woraiyur, Tiruchirappalli"
+                            data-images = '["Aaruthal", 7]'>    
+                            <p>
+                                <b>Aaruthal</b> &nbsp; &nbsp; &nbsp; Residence &nbsp; <button>Manual</button><br>
+                                <span class="caption">2<sup>nd</sup> year Architectural Design Project</span>
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="work-card" id="vana"
+                            data-title = "Vana" 
+                            data-sub = "Veterinary Clinic"
+                            data-loc = "Guntur, Tiruchirappalli"
+                            data-images = '["Vana", 4]'>    
+                            <p>
+                                <b>Vana</b> &nbsp; &nbsp; &nbsp; Veterinary Clinic Design &nbsp; <button>Manual</button><br>
+                                <span class="caption">2<sup>nd</sup> year Architectural Design Project</span>
+                            </p>
+                        </div>
+                    </td>
+                    <td>
                         <div class="work-card" id="majonghor"
                             data-title = "House Majonghor" 
                             data-sub = "Climate Responsive House"
+                            data-loc = "Panaji, Goa"
                             data-images = '["Majonghor", 8]'>    
                             <p>
                                 <b>House Majonghor</b> &nbsp; &nbsp; &nbsp; Climate Responsive House<br>
@@ -98,24 +107,25 @@
                 </tr>
                 <tr>
                     <td>
-                        <div class="work-card" id="s1"
-                            data-title = "Vana" 
-                            data-sub = "Veterinary Clinic"
-                            data-images = '["Vana", 3]'>    
+                        <div class="work-card" id="living-kitchen"
+                            data-title = "Living Kitchen" 
+                            data-sub = "Space Design"
+                            data-loc = "DoA, NIT Tiruchirappalli"
+                            data-images = '["Living Kitchen", 4]'>
                             <p>
-                                <b>Sample</b> &nbsp; &nbsp; &nbsp; Sample &nbsp; <button>Manual</button><br>
-                                <span class="caption">6<sup>th</sup> year Architectural Design Project</span>
+                                <b>Living Kitchen</b> &nbsp; &nbsp; &nbsp; Space Design &nbsp; <button>Manual</button><br>
+                                <span class="caption">1<sup>st</sup> year Design Project</span>
                             </p>
                         </div>
                     </td>
                     <td>
-                        <div class="work-card" id="s1"
+                        <div class="work-card" id="daycare"
                             data-title = "Illakoodam" 
                             data-sub = "Daycare Centre"
                             data-images = '["Daycare", 5]'>    
                             <p>
-                                <b>Sample</b> &nbsp; &nbsp; &nbsp; Sample &nbsp; <button>Manual</button><br>
-                                <span class="caption">6<sup>th</sup> year Design Project</span>
+                                <b>Illakoodam</b> &nbsp; &nbsp; &nbsp; Daycare Centre &nbsp; <button>Manual</button><br>
+                                <span class="caption">6<sup>th</sup> year Architectural Design Project</span>
                             </p>
                         </div>
                     </td>
@@ -127,8 +137,8 @@
 
         </div>
 
-        <img src="Images/Kavipriyan Portfolio pic.png"
-            style="height: 820px; position: fixed; right: -80px; bottom: 0px;">
+        <!--img src="Images/Kavipriyan Portfolio pic.png"
+            style="height: 70%; position: fixed; right: -4%; bottom: 0px;"-->
 
         <!--Spinning Loader Container-->
         <div class="image-container">
