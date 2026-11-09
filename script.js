@@ -26,7 +26,7 @@ document.querySelectorAll('.work-card').forEach(card => {
         for (let i = 1; i <= imageData[1]; i++) {
             currentImages.push(`Portfolio/${imageData[0]}/${i}.jpeg`);
         }
-
+        
         projectTitle.innerText = card.getAttribute('data-title');
         projectCap.innerText = card.getAttribute('data-sub');
         projectLoc.innerText = card.getAttribute('data-loc');
